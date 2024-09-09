@@ -17,7 +17,7 @@ function Photo() {
           <Image
             src={"/assets/photo.jpg"}
             alt={""}
-            property
+            property={"true"}
             quality={100}
             fill
             className={"object-contain"}
