@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 
 const socialIcon = [

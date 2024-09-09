@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 function PageTransition({ children }) {
@@ -16,7 +16,7 @@ function PageTransition({ children }) {
           }}
           exit={{ opacity: 0 }}
           className={
-            "bg-primary pointer-events-none fixed top-0 h-screen w-screen"
+            "pointer-events-none fixed top-0 h-screen w-screen bg-primary"
           }
         />
         {children}

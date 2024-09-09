@@ -19,7 +19,7 @@ function StairTransition() {
           </div>
           <motion.div
             className={
-              "bg-primary pointer-events-none fixed top-0 h-screen w-screen"
+              "pointer-events-none fixed top-0 h-screen w-screen bg-primary"
             }
             initial={{ opacity: "1" }}
             animate={{

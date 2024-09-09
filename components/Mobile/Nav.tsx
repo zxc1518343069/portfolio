@@ -11,7 +11,7 @@ function MobileNav() {
   return (
     <Sheet>
       <SheetTrigger className={"flex items-center justify-center"}>
-        <CiMenuFries className={"text-accent text-[32px]"} />
+        <CiMenuFries className={"text-[32px] text-accent"} />
       </SheetTrigger>
       <SheetContent className={"flex flex-col"}>
         <div className={"mb-40 mt-32 text-center text-2xl"}>
@@ -26,7 +26,7 @@ function MobileNav() {
             <Link
               href={link.path}
               key={link.name}
-              className={`${pathname === link.path && "text-accent border--b-2 border-accent"} hover:text-accent text-xl capitalize transition-all`}
+              className={`${pathname === link.path && "border--b-2 border-accent text-accent"} text-xl capitalize transition-all hover:text-accent`}
             >
               {link.name}
             </Link>

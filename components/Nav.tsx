@@ -12,7 +12,7 @@ function Nav() {
         <Link
           href={link.path}
           key={link.name}
-          className={`${pathname === link.path && "text-accent border--b-2 border-accent"} hover:text-accent font-medium capitalize transition-all`}
+          className={`${pathname === link.path && "border--b-2 border-accent text-accent"} font-medium capitalize transition-all hover:text-accent`}
         >
           {link.name}
         </Link>

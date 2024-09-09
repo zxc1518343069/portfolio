@@ -1,15 +1,8 @@
 "use client";
 
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaNodeJs,
-} from "react-icons/fa";
+import { FaCss3, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
