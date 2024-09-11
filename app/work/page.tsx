@@ -1,3 +1,3 @@
 export default function Resume() {
-  return <main> resume</main>;
+  return <main> works</main>;
 }
