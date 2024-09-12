@@ -6,17 +6,7 @@ import Stats from "@/components/Stats";
 import { Metadata } from "next";
 
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s | Wu Yichen',
-    default: 'Wu Yichen - portfolio', 
-  },
-  creator: 'Wu Yichen',
-  keywords: ['Wu Yichen'],
-  description: 'Wu Yichen - Personal resume and work display',
 
-
-}
 
 
 export default function Home() {
