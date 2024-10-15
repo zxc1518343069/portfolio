@@ -25,11 +25,11 @@ const about = {
     },
     {
       fileName: "WeChat",
-      fileValue: "",
+      fileValue: "wxid_wjeskj1vem3122",
     },
     {
       fileName: "Experience",
-      fileValue: "3+ years ",
+      fileValue: "2+ years ",
     },
     {
       fileName: "Name",
@@ -41,12 +41,8 @@ const about = {
     },
     {
       fileName: "Email",
-      fileValue: "",
+      fileValue: "developerachen@gmail.com",
     },
-    // {
-    //   fileName: "Freelance",
-    //   fileValue: "Available",
-    // },
   ],
 };
 
@@ -68,12 +64,12 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates quibusdam sunt explicabo inventore,",
+    "University",
   items: [
     {
-      institution: "Online Course Platform",
-      position: "Full Stack Web Development Bootcamp",
-      duration: "2023",
+      institution: "Software engineering",
+      position: "Nanyang Institute of Technology",
+      duration: "2018 -2022",
     },
   ],
 };
