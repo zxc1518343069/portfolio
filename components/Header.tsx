@@ -1,7 +1,7 @@
+import MobileNav from "@/components/Mobile/Nav";
+import Nav from "@/components/Nav";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import Nav from "@/components/Nav";
-import MobileNav from "@/components/Mobile/Nav";
 
 function Header() {
   return (
@@ -14,8 +14,8 @@ function Header() {
         </Link>
         <div className={"hidden items-center gap-8 xl:flex"}>
           <Nav />
-          <Link href={"/"}>
-            <Button>hire Me</Button>
+          <Link href={"/resume"}>
+            <Button>聊聊？</Button>
           </Link>
         </div>
 

@@ -1,18 +1,18 @@
 export const navLinks = [
   {
-    name: "home",
+    name: "首页",
     path: "/",
   },
+  // {
+  //   name: "services",
+  //   path: "/services",
+  // },
   {
-    name: "services",
-    path: "/services",
-  },
-  {
-    name: "Resume",
+    name: "简历",
     path: "/resume",
   },
   {
-    name: "Work",
+    name: "作品",
     path: "/work",
   },
 ];

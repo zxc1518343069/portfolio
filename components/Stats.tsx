@@ -16,7 +16,7 @@ const stats = [
   },
   {
     num: 500,
-    text: "Code commits",
+    text: "Recently code commits",
   },
 ];
 

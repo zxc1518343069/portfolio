@@ -1,9 +1,6 @@
 "use client";
 
-import { FaCss3, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";
-
-import { SiNextdotjs } from "react-icons/si";
-
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
@@ -11,8 +8,10 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import { FaCss3, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";
+
+import { SiKuaishou, SiNextdotjs } from "react-icons/si";
 
 const about = {
   title: "About me",
@@ -48,14 +47,20 @@ const about = {
 
 const exprience = {
   icon: "/assets/resume/badge.svg",
-  title: "My experience",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates quibusdam sunt explicabo inventore",
+  title: "工作经历",
+  description: "毕业到现在所呆过的公司",
   items: [
     {
-      company: "Kuai Shou",
-      position: "Web Fe development",
-      duration: "2022-Present",
+      companyIcon: <SiKuaishou color={"#FF3D13"} />,
+      company: "快手",
+      position: "前端开发（实习）",
+      duration: "2021-2022",
+    },
+    {
+      companyIcon: <SiKuaishou color={"#FF3D13"} />,
+      company: "快手",
+      position: "前端开发",
+      duration: "2022-至今",
     },
   ],
 };
@@ -63,8 +68,7 @@ const exprience = {
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
-  description:
-    "University",
+  description: "University",
   items: [
     {
       institution: "Software engineering",
@@ -129,10 +133,10 @@ export default function Resume() {
             className={"flex flex-col gap-[60px] xl:flex-row"}
           >
             <TabsList className="mx-auto flex w-full max-w-[380px] flex-col gap-6 rounded-lg xl:mx-0">
-              <TabsTrigger value={"experience"}>Experience</TabsTrigger>
-              <TabsTrigger value={"education"}>Education</TabsTrigger>
-              <TabsTrigger value={"skills"}>Skills</TabsTrigger>
-              <TabsTrigger value={"about"}>About me</TabsTrigger>
+              <TabsTrigger value={"experience"}>工作经历</TabsTrigger>
+              <TabsTrigger value={"education"}>教育</TabsTrigger>
+              <TabsTrigger value={"skills"}>技能</TabsTrigger>
+              <TabsTrigger value={"about"}>关于我</TabsTrigger>
             </TabsList>
 
             <div className={"min-h-[70vh] w-full"}>
@@ -175,6 +179,7 @@ export default function Resume() {
                                     "h-[6px] w-[6px] rounded-full bg-accent"
                                   }
                                 ></span>
+                                {item.companyIcon}
                                 <p className={"text-white/60"}>
                                   {item.company}
                                 </p>

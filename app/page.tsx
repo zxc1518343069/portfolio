@@ -1,8 +1,8 @@
+import Photo from "@/components/Photo";
+import Social from "@/components/Social";
+import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
-import Social from "@/components/Social";
-import Photo from "@/components/Photo";
-import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
@@ -10,18 +10,22 @@ export default function Home() {
       <div className="container mx-auto h-full">
         <div
           className={
-            "flex flex-col items-center justify-between xl:flex-row xl:pb-24 xl:pt-8"
+            "flex flex-col items-center justify-between xl:flex-row xl:pb-16 xl:pt-8"
           }
         >
           <div className={"order-2 text-center xl:order-none xl:text-left"}>
-            <span className={"text-xl"}>Software Developer</span>
+            <span className={"text-xl text-white/60"}>
+              花有重开日,人无再少年
+            </span>
             <h1 className={"h1"}>
               Hello I&apos;m <br />{" "}
-              <span className={"text-accent"}>Wu Yichen</span>
+              <span className={"text-accent"}>吴 轶琛</span>
             </h1>
             <p className={"mb-9 max-w-[500px] text-white/80"}>
-              I excel at crafting elegant digital experiences and I am
-              proficient in various programming languages and technologies.
+              没有太多明显的有点（不爱自夸），但主打的听劝 <br />
+              英雄联盟手游大乱斗爱好者 <br />
+              工作是一名前端开发，熟悉前端各类主流编程技术（不主流也学） <br />
+              愿景是做一名全栈开发 <br />
             </p>
 
             <div className={"flex flex-col items-center gap-8 xl:flex-row"}>
@@ -47,6 +51,9 @@ export default function Home() {
             <Photo />
           </div>
         </div>
+      </div>
+      <div className={"pb-4 text-center text-white/50"}>
+        工作座右铭: 计算机的世界没有黑魔法，所有的东西只是我现在不知道而已
       </div>
       <Stats />
     </section>

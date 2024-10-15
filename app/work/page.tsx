@@ -1,14 +1,14 @@
 "use client";
-import { motion } from "framer-motion";
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -16,31 +16,45 @@ import "swiper/css";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "project1",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates quibusdam, sunt explicabo inventore.",
-    stick: [{ name: "html5" }, { name: "css3" }, { name: "JavaScript" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
-  },
-  {
-    num: "02",
     category: "Full Stack Project",
-    title: "project2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates quibusdam, sunt explicabo inventore.",
-    stick: [{ name: "html5" }, { name: "css3" }, { name: "JavaScript" }],
-    image: "/assets/work/thumb2.png",
-    live: "",
+    title: "Stackoverflow-clone",
+    desc: "一个模仿Stackoverflow的论坛网站",
+    done: true,
+    stick: [
+      { name: "Next.js" },
+      { name: "Tailwindcss" },
+      { name: "WebHook" },
+      { name: "Shadcn/ui" },
+      { name: "Clerk" },
+      { name: "Mongodb" },
+    ],
+    image: "/assets/work/thumb4.png",
+    live: "https://stackoverflow-clone-sepia-nine.vercel.app/",
     github: "",
   },
   {
     num: "02",
     category: "Frontend Project",
-    title: "project2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates quibusdam, sunt explicabo inventore.",
-    stick: [{ name: "html5" }, { name: "css3" }, { name: "JavaScript" }],
-    image: "/assets/work/thumb3.png",
+    title: "portfolio",
+    desc: "个人简历网站",
+    done: true,
+    stick: [
+      { name: "Next.js" },
+      { name: "Tailwindcss" },
+      { name: "framer-motion" },
+    ],
+    image: "/assets/work/thumb5.png",
+    live: "https://portfolio-blush-sigma-68.vercel.app/",
+    github: "",
+  },
+  {
+    num: "03",
+    category: "Full Stack Project",
+    title: "English learn",
+    desc: "英语学习网站，类似多邻国",
+    stick: [{ name: "Next.js" }, { name: "Tailwindcss" }, { name: "Other" }],
+    image: "/assets/work/thumb5.png",
+    done: false,
     live: "",
     github: "",
   },
@@ -85,7 +99,7 @@ export default function Works() {
                 {project.category}
               </h2>
               <p className={"text-white/60"}>{project.desc}</p>
-              <ul className={"flex gap-4"}>
+              <ul className={"flex flex-wrap gap-4"}>
                 {project.stick.map((item, index) => {
                   return (
                     <li key={item.name} className={"text-xl text-accent"}>
@@ -112,17 +126,17 @@ export default function Works() {
                         />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Live project</p>
+                        <p>{project.done ? `Live project` : `doing`}</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.live}>
+                <Link href={project.github} aria-disabled>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger
                         className={
-                          "group flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white/5"
+                          "group flex h-[70px] w-[70px] cursor-not-allowed items-center justify-center rounded-full bg-white/5"
                         }
                       >
                         <BsGithub
@@ -132,7 +146,7 @@ export default function Works() {
                         />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Live project</p>
+                        <p>Github</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
